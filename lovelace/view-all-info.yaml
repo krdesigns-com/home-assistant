@@ -1,0 +1,49 @@
+title: Information
+icon: 'mdi:information-outline'
+cards:
+  - cards:
+      - entity: weather.home
+        type: 'custom:weather-card'
+      - entities:
+          - entities:
+              - entity: sensor.worldwide_coronavirus_confirmed
+                name: Confirmed
+                unit: false
+              - entity: sensor.worldwide_coronavirus_deaths
+                name: Deaths
+                unit: false
+            entity: sensor.worldwide_coronavirus_recovered
+            icon: 'mdi:biohazard'
+            name: Worldwide
+            secondary_info: null
+            state_header: Recovered
+            type: 'custom:multiple-entity-row'
+            unit: false
+          - entities:
+              - entity: sensor.indonesia_coronavirus_confirmed
+                name: Confirmed
+                unit: false
+              - entity: sensor.indonesia_coronavirus_deaths
+                name: Deaths
+                unit: false
+            entity: sensor.indonesia_coronavirus_recovered
+            icon: 'mdi:biohazard'
+            name: Indonesia
+            secondary_info: null
+            state_header: Recovered
+            type: 'custom:multiple-entity-row'
+            unit: false
+        show_header_toggle: false
+        title: Corona Update
+        type: entities
+      - entities:
+          - entity: calendar.holidays_in_indonesia
+        title: Indonesian Holidays
+        type: 'custom:atomic-calendar'
+    type: vertical-stack
+  - default_zoom: 8
+    entities: null
+    geo_location_sources:
+      - usgs_earthquakes_feed
+    title: Earthquakes
+    type: map

@@ -1,0 +1,62 @@
+# Shown files
+.*
+@*
+!.gitignore
+
+# General Hass Extensions
+*.pid
+*.csr
+*.crt
+*.key
+*.conf
+*.db-journal
+*.log
+*.db
+*.txt
+*.deb
+*.sh
+*.pickle
+
+# Ignore folders.
+deps
+tts
+www/images
+www/community
+custom_components
+lovelace/custom-header.yaml
+lovelace/resources.yaml
+
+# Ensure these YAML files are ignored, otherwise your secret 
+data/credentials will leak.
+ip_bans.yaml
+secrets.yaml
+known_devices.yaml
+google_calendars.yaml
+anniversary.yaml
+
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk%

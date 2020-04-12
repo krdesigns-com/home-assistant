@@ -1,0 +1,25 @@
+title: Camera
+icon: 'mdi:cctv'
+cards:
+  - camera_image: camera.frontcam
+    entities:
+      - light.bardi_bulb_porch_4
+      - light.bardi_bulb_porch_1
+    title: CCTV Front Entrance
+    type: picture-glance
+  - camera_image: camera.gardencam
+    entities:
+      - light.bardi_bulb_garden_1
+      - light.bardi_bulb_garden_2
+    title: CCTV Garden
+    type: picture-glance
+  - camera_image: camera.garagecam2
+    entities:
+      - light.bardi_bulb_porch_3
+      - light.bardi_bulb_porch_2
+    title: CCTV Garage
+    type: picture-glance
+  - camera_image: camera.kitchen
+    entities: []
+    title: CCTV Kitchen
+    type: picture-glance

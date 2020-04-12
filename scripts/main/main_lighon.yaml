@@ -1,0 +1,13 @@
+sequence:
+  #activate turn_off only if switch.ac_power is 'on'
+  - condition: template
+    value_template: >
+      {% if is_state('switch.main_light', 'off') %}
+        true
+      {% elif is_state('switch.main_light', 'on') %}
+        false
+      {% else %}
+        false
+      {% endif %}
+  - service: switch.turn_on
+    entity_id: switch.main_light

@@ -1,0 +1,36 @@
+title: Family
+icon: 'mdi:account-group'
+cards:
+  - entities:
+      - person.richard_tirtadji
+      - entity: sensor.richard_s_birthday
+      - entity: device_tracker.richards_iphone
+        icon: 'mdi:cellphone-iphone'
+        name: iPhone X
+        secondary_info: last-changed
+      - sensor.richards_iphone_battery_level
+      - entity: device_tracker.hd1910
+        icon: 'mdi:cellphone'
+        name: OnePlus 7T Pro McLaren
+        secondary_info: last-changed
+      - entity: sensor.oneplus_battery_sensor
+        name: Battery Level
+    show_header_toggle: false
+    title: Richard Tirtadji
+    type: entities
+  - entities:
+      - entity: person.lucia
+      - entity: sensor.mom_s_birthday
+      - entity: device_tracker.lucias_iphone_6
+        icon: 'mdi:cellphone-iphone'
+        name: iPhone 6
+        secondary_info: last-changed
+      - sensor.lucias_iphone_6_battery_level
+      - entity: device_tracker.lucias_iphone_6_plus
+        icon: 'mdi:cellphone-iphone'
+        name: iPhone 6 Plus
+        secondary_info: last-changed
+      - sensor.lucias_iphone_6_plus_battery_level
+    show_header_toggle: false
+    title: Lucia
+    type: entities

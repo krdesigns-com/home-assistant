@@ -1,0 +1,22 @@
+# Synology NAS
+- platform: synologydsm
+  host: !secret synology_old_ip
+  username: !secret synology_old_user
+  password: !secret synology_old_pass
+  monitored_conditions:
+    - cpu_total_load
+    - memory_real_usage
+    - network_up
+    - disk_status
+    - disk_temp
+- platform: synologydsm
+  host: !secret synology_new_ip
+  username: !secret synology_new_user
+  password: !secret synology_new_pass
+  monitored_conditions:
+    - cpu_total_load
+    - memory_real_usage
+    - network_up
+    - disk_smart_status
+    - disk_status
+    - disk_temp

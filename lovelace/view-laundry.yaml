@@ -1,0 +1,71 @@
+title: Laundry Room
+icon: 'mdi:washing-machine'
+cards:
+  - cards:
+      - entities:
+          - entity: switch.pow_r2_1
+            icon: 'mdi:washing-machine'
+            name: Washer One
+        show_header_toggle: false
+        type: entities
+      - columns: 5
+        entities:
+          - entity: sensor.pow_r2_1_energy_voltage
+            name: Voltage
+          - entity: sensor.pow_r2_1_energy_current
+            name: Current
+          - entity: sensor.pow_r2_1_energy_power
+            name: Power
+          - entity: sensor.pow_r2_1_energy_apparentpower
+            name: App. Power
+          - entity: sensor.pow_r2_1_energy_reactivepower
+            name: Rea. Power
+        type: glance
+      - columns: 5
+        entities:
+          - entity: sensor.pow_r2_1_energy_today
+            name: E. Today
+          - entity: sensor.pow_r2_1_energy_yesterday
+            name: E. Yesterday
+          - entity: sensor.pow_r2_1_energy_total
+            name: E. Total
+          - entity: sensor.pow_r2_1_energy_factor
+            name: E. Factor
+          - entity: sensor.pow_r2_1_status
+            name: Status
+        type: glance
+    type: vertical-stack
+  - cards:
+      - entities:
+          - entity: switch.pow_r2_2
+            icon: 'mdi:washing-machine'
+            name: Washer Two
+        show_header_toggle: false
+        type: entities
+      - columns: 5
+        entities:
+          - entity: sensor.pow_r2_2_energy_voltage
+            name: Voltage
+          - entity: sensor.pow_r2_2_energy_current
+            name: Current
+          - entity: sensor.pow_r2_2_energy_power
+            name: Power
+          - entity: sensor.pow_r2_2_energy_apparentpower
+            name: App. Power
+          - entity: sensor.pow_r2_2_energy_reactivepower
+            name: Rea. Power
+        type: glance
+      - columns: 5
+        entities:
+          - entity: sensor.pow_r2_2_energy_today
+            name: E. Today
+          - entity: sensor.pow_r2_2_energy_yesterday
+            name: E. Yesterday
+          - entity: sensor.pow_r2_2_energy_total
+            name: E. Total
+          - entity: sensor.pow_r2_2_energy_factor
+            name: E. Factor
+          - entity: sensor.pow_r2_2_status
+            name: Status
+        type: glance
+    type: vertical-stack

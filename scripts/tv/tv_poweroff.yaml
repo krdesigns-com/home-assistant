@@ -1,0 +1,14 @@
+# AC Scripts
+sequence:
+  #activate turn_off only if switch.ac_power is 'on'
+  - condition: template
+    value_template: >
+      {% if is_state('switch.tv_power', 'on') %}
+        true
+      {% elif is_state('switch.tv_power', 'off') %}
+        false
+      {% else %}
+        false
+      {% endif %}
+  - service: switch.turn_off
+    entity_id: switch.tv_power

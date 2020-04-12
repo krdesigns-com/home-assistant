@@ -1,0 +1,129 @@
+- alias: Cuckoo Clock
+  trigger:
+    - platform: time_pattern
+      hours: '*'
+      minutes: '0'
+    - platform: time_pattern
+      minutes: '30'
+
+  condition:
+    - condition: time
+      after: '09:29:00'
+      before: '21:01:00'
+    - condition: template
+      value_template: >
+        {% if is_state('media_player.my_room_assistant', 'playing') %}
+          false
+        {% else %}
+          true
+        {% endif %}
+    - condition: template
+      value_template: >
+        {% if is_state('media_player.family_room_assistant', 'playing') %}
+          false
+        {% else %}
+          true
+        {% endif %}
+    - condition: template
+      value_template: >
+        {% if is_state('media_player.dining_room_assistant', 'playing') %}
+          false
+        {% else %}
+          true
+        {% endif %}
+
+  action:
+    - service: media_player.play_media
+      data_template:
+        entity_id:
+          - media_player.my_room_assistant
+          - media_player.family_room_assistant
+          - media_player.dining_room_assistant
+        media_content_id: >
+          {% if now().strftime("%M")|int == 30 %}
+            https://main.hass.zone:7670/local/sounds/cuckoo/cuckoo-clock-01.wav
+          {% else %}
+            https://main.hass.zone:7670/local/sounds/cuckoo/cuckoo-clock-{{now().strftime("%I")}}.wav
+          {% endif %}
+        media_content_type: audio/mp4
+
+# My Charger Automations
+- alias: Turn On All my Charger
+  trigger:
+    - platform: time
+      at: '04:00:00'
+
+  action:
+    - service: switch.turn_on
+      entity_id:
+        - switch.workplug_watch
+        - switch.workplug_phone
+        - switch.tableplug_ipad
+        - switch.tableplug_iphone
+        - switch.tableplug_oneplus
+
+- alias: Turn Off All my Charger
+  trigger:
+    - platform: time
+      at: '07:30:00'
+
+  action:
+    - service: switch.turn_off
+      entity_id:
+        - switch.workplug_watch
+        - switch.workplug_phone
+        - switch.tableplug_ipad
+        - switch.tableplug_iphone
+        - switch.tableplug_oneplus
+
+# Light Automation
+- alias: Turn On Light on Sunset
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "-00:15:00"
+
+  action:
+    service: light.turn_on
+    entity_id:
+      - light.bardi_bulb_porch_1
+      - light.bardi_bulb_porch_2
+      - light.bardi_bulb_garden_1
+      - light.bardi_bulb_garden_2
+      - light.bardi_bulb_porch_3
+      - light.bardi_bulb_porch_4
+
+- alias: Turn Off Light on 05:45
+  trigger:
+    - platform: time
+      at: '05:45:00'
+
+  action:
+    - service: light.turn_off
+      entity_id:
+      - light.bardi_bulb_porch_1
+      - light.bardi_bulb_porch_2
+      - light.bardi_bulb_garden_1
+      - light.bardi_bulb_garden_2
+      - light.bardi_bulb_porch_3
+      - light.bardi_bulb_porch_4
+
+
+# Family Room Light
+- alias: Turn On Family Room Light
+  trigger:
+    - platform: time
+      at: '17:30:00'
+
+  action:
+    service: light.turn_on
+    entity_id: light.bardi_bulb_fam
+
+- alias: Turn Off Family Room Light
+  trigger:
+    - platform: time
+      at: '23:30:00'
+
+  action:
+    - service: light.turn_off
+      entity_id: light.bardi_bulb_fam

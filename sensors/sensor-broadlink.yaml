@@ -1,0 +1,12 @@
+# BroadLink Temprature
+- platform: yr
+- platform: broadlink
+  scan_interval: 60
+  host: !secret broad_sen_ip
+  mac: !secret broad_sen_mac
+  monitored_conditions:
+    - light
+    - temperature
+    - humidity
+    - air_quality
+    - noise

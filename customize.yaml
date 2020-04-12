@@ -1,0 +1,272 @@
+# Person
+person.richard_tirtadji:
+  entity_picture: /local/images/richard.jpg
+person.milanwati_hadi:
+  entity_picture: /local/images/mila.jpg
+person.lucia:
+  entity_picture: /local/images/mami.png
+
+# Plugs
+switch.table_plug:
+  friendly_name: Table Plug
+  icon: mdi:power-socket-eu
+switch.work_plug:
+  icon: mdi:power-socket-eu
+
+# AC Customization script
+switch.ac_power:
+  friendly_name: "Power"
+  icon: mdi:power
+  assumed_state: false
+script.ac_mode:
+  friendly_name: "Mode"
+  icon: mdi:settings-box
+script.ac_temp_up:
+  friendly_name: "Temp up"
+  icon: mdi:thermometer-lines
+script.ac_temp_down:
+  friendly_name: "Temp down"
+  icon: mdi:snowflake
+script.ac_fan:
+  friendly_name: "Fan"
+  icon: mdi:fan
+script.ac_swing:
+  friendly_name: "Swing"
+  icon: mdi:format-rotate-90
+script.ac_powerchild:
+  friendly_name: "Powerchild"
+  icon: mdi:human-handsup
+
+# LG Speaker Button
+script.lg_speaker_power:
+  friendly_name: "Power"
+  icon: mdi:power
+script.lg_speaker_vol_up:
+  friendly_name: "Vol Up"
+  icon: mdi:arrow-up-bold-box-outline
+script.lg_speaker_vol_down:
+  friendly_name: "Vol Down"
+  icon: mdi:arrow-down-bold-box-outline
+script.lg_speaker_mode:
+  friendly_name: "Mode"
+  icon: mdi:settings
+
+# TV Customization script
+switch.tv_power:
+  friendly_name: "Power"
+  icon: mdi:power
+  assumed_state: false
+script.tv_source:
+  friendly_name: "Source"
+  icon: mdi:export
+script.tv_vol_up:
+  friendly_name: "Vol Up"
+  icon: mdi:volume-plus
+script.tv_vol_down:
+  friendly_name: "Vol Down"
+  icon: mdi:volume-minus
+script.tv_channel_up:
+  friendly_name: "Channel Up"
+  icon: mdi:arrow-up-bold-box-outline
+script.tv_channel_down:
+  friendly_name: "Channel Down"
+  icon: mdi:arrow-down-bold-box-outline
+
+# FM Customization script
+switch.fm_power:
+  friendly_name: "Power"
+  icon: mdi:power
+  assumed_state: false
+script.fm_channel_up:
+  friendly_name: "Channel Up"
+  icon: mdi:arrow-up-bold-box-outline
+script.fm_channel_down:
+  friendly_name: "Channel Down"
+  icon: mdi:arrow-down-bold-box-outline
+  
+# Hidden Button AC
+switch.ac_mode:
+  icon: mdi:settings-box
+  assumed_state: false
+  hidden: true
+switch.ac_temp_up:
+  icon: mdi:thermometer-lines
+  assumed_state: false
+  hidden: true
+switch.ac_temp_down:
+  icon: mdi:snowflake
+  assumed_state: false
+  hidden: true
+switch.ac_fan:
+  icon: mdi:fan
+  assumed_state: false
+  hidden: true
+switch.ac_swing:
+  icon: mdi:format-rotate-90
+  assumed_state: false
+  hidden: true
+switch.ac_powerchild:
+  icon: mdi:human-handsup
+  assumed_state: false
+  hidden: true
+
+# Hidden LG Speaker Button
+switch.lg_speaker_power:
+  icon: mdi:power
+  assumed_state: false
+  hidden: true
+switch.lg_speaker_vol_up:
+  icon: mdi:volume-plus
+  assumed_state: false
+  hidden: true
+switch.lg_speaker_vol_down:
+  icon: mdi:volume-minus
+  assumed_state: false
+  hidden: true
+switch.lg_speaker_mode:
+  icon: mdi:settings
+  assumed_state: false
+  hidden: true
+
+# Hidden TV Switch Button
+switch.tv_source:
+  icon: mdi:export
+  assumed_state: false
+  hidden: true
+switch.tv_vol_up:
+  icon: mdi:volume-plus
+  assumed_state: false
+  hidden: true
+switch.tv_vol_down:
+  icon: mdi:volume-minus
+  assumed_state: false
+  hidden: true
+switch.tv_channel_up:
+  icon: mdi:arrow-up-bold-box-outline
+  assumed_state: false
+  hidden: true
+switch.tv_channel_down:
+  icon: mdi:arrow-down-bold-box-outline
+  assumed_state: false
+  hidden: true
+
+# Hidden FM Switch Button
+switch.fm_source:
+  icon: mdi:export
+  assumed_state: false
+  hidden: true
+switch.fm_channel_up:
+  icon: mdi:arrow-up-bold-box-outline
+  assumed_state: false
+  hidden: true
+switch.fm_channel_down:
+  icon: mdi:arrow-down-bold-box-outline
+  assumed_state: false
+  hidden: true
+
+# TC2 Light Switch Box 1
+switch.main_light:
+  friendly_name: "Main Room Light Switch 1"
+  icon: mdi:lightbulb
+  assumed_state: false
+switch.main_secondary_light:
+  friendly_name: "Main Room Light Switch 2"
+  icon: mdi:lightbulb
+  assumed_state: false
+
+# TC2 Light Switch Box 2
+switch.guest_light:
+  friendly_name: "Guest Room Light Switch 1"
+  icon: mdi:lightbulb
+  assumed_state: false
+switch.guest_secondary_light:
+  friendly_name: "Guest Room Light Switch 2"
+  icon: mdi:lightbulb
+  assumed_state: false
+
+# Hidden AC Power
+script.ac_poweroff:
+  hidden: true
+script.ac_poweron:
+  hidden: true
+
+# Hidden TV Power
+script.tv_poweroff:
+  hidden: true
+script.tv_poweron:
+  hidden: true
+
+# Hidden FM Power
+script.fm_poweroff:
+  hidden: true
+script.fm_poweron:
+  hidden: true
+
+# Hidden Light Switch
+script.main_lightoff:
+  hidden: true
+script.main_lighton:
+  hidden: true
+script.main_secondary_lightoff:
+  hidden: true
+script.main_secondary_lighton:
+  hidden: true
+
+# Hidden Light Switch
+script.guest_lightoff:
+  hidden: true
+script.guest_lighton:
+  hidden: true
+script.guest_secondary_lightoff:
+  hidden: true
+script.guest_secondary_lighton:
+  hidden: true
+  
+# Temprature Sensor
+sensor.broadlink_sensor_air_quality:
+  friendly_name: "Air Quality"
+sensor.broadlink_sensor_humidity:
+  friendly_name: "Humidity"
+sensor.broadlink_sensor_light:
+  friendly_name: "Light"
+sensor.broadlink_sensor_noise:
+  friendly_name: "Noise"
+sensor.broadlink_sensor_temperature:
+  friendly_name: "Temperature"
+
+# Google Fit Sensor
+# sensor.google_fit_sleep_bedtime:
+#   friendly_name: Bedtime
+#   icon: mdi:hotel
+# sensor.google_fit_calories:
+#   friendly_name: Calories
+# sensor.google_fit_distance:
+#   friendly_name: Distance
+# sensor.google_fit_move_time:
+#   friendly_name: Move time
+# sensor.google_fit_weight:
+#   friendly_name: Weight
+#   icon: mdi:scale-bathroom
+# sensor.google_fit_height:
+#   friendly_name: Height
+# sensor.google_fit_sleep:
+#   friendly_name: Sleep
+# sensor.google_fit_sleep_wake_up_time:
+#   friendly_name: Wakeup time
+#   icon: mdi:white-balance-sunny
+# sensor.google_fit_steps:
+#   friendly_name: Steps 
+# sensor.google_fit_heart_rate:
+#   friendly_name: Heart Rate
+#   icon: mdi:heart-pulse
+# sensor.google_fit_bmi:
+#   friendly_name: BMI
+#   icon: mdi:finance
+# sensor.google_fit_body_fat:
+#   friendly_name: Body Fat
+#   icon: mdi:cupcake 
+# sensor.google_fit_sleep_deep_sleep:
+#  friendly_name: Deep sleep time
+#  icon: mdi:sleep
+# sensor.google_fit_sleep_light_sleep:
+#  friendly_name: Light sleep

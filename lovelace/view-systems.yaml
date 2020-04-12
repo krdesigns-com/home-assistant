@@ -1,0 +1,131 @@
+title: System
+icon: 'mdi:server-network'
+cards:
+  - cards:
+      - entities:
+          - entity: sensor.synology_dsm_memory_usage_real
+            name: Memory Usage
+          - entity: sensor.synology_dsm_cpu_load_total
+            name: CPU Load
+          - entity: sensor.synology_dsm_network_up
+            name: Network
+        theme: default
+        title: Synology DS918+
+        type: glance
+      - entities:
+          - entity: sensor.synology_dsm_status_sda
+            name: HDD 1
+          - entity: sensor.synology_dsm_status_sdb
+            name: HDD 2
+          - entity: sensor.synology_dsm_status_sdc
+            name: HDD 3
+        theme: default
+        type: glance
+      - cards:
+          - entity: sensor.synology_dsm_temperature_sda
+            max: 100
+            min: 0
+            name: HDD 1
+            severity:
+              green: 0
+              red: 80
+              yellow: 60
+            theme: default
+            type: gauge
+          - entity: sensor.synology_dsm_temperature_sdb
+            max: 100
+            min: 0
+            name: HDD 2
+            severity:
+              green: 0
+              red: 80
+              yellow: 60
+            theme: default
+            type: gauge
+          - entity: sensor.synology_dsm_temperature_sdc
+            max: 100
+            min: 0
+            name: HDD 3
+            severity:
+              green: 0
+              red: 80
+              yellow: 60
+            theme: default
+            type: gauge
+        type: horizontal-stack
+    type: vertical-stack
+  - cards:
+      - entities:
+          - entity: sensor.synology_dsm_memory_usage_real_2
+            name: Memory Usage
+          - entity: sensor.synology_dsm_cpu_load_total_2
+            name: CPU Load
+          - entity: sensor.synology_dsm_network_up_2
+            name: Network
+        theme: default
+        title: Synology DS211j
+        type: glance
+      - entities:
+          - entity: sensor.synology_dsm_status_sda_2
+            name: HDD 1
+          - entity: sensor.synology_dsm_status_sdb_2
+            name: HDD 2
+        theme: default
+        type: glance
+      - cards:
+          - entity: sensor.synology_dsm_temperature_sda_2
+            max: 100
+            min: 0
+            name: HDD 1
+            severity:
+              green: 0
+              red: 80
+              yellow: 60
+            theme: default
+            type: gauge
+          - entity: sensor.synology_dsm_temperature_sdb_2
+            max: 100
+            min: 0
+            name: HDD 2
+            severity:
+              green: 0
+              red: 80
+              yellow: 60
+            theme: default
+            type: gauge
+        type: horizontal-stack
+    type: vertical-stack
+  - cards:
+      - entities:
+          - entity: sensor.nut_ups_status
+            name: Status
+          - entity: sensor.nut_ups_input_voltage
+            name: Input Voltage
+          - entity: sensor.nut_ups_battery_runtime
+            name: Battery Runtime
+        theme: default
+        title: UPS CyberPower 600ELCD
+        type: glance
+      - cards:
+          - entity: sensor.nut_ups_battery_charge
+            max: 100
+            min: 0
+            name: CP Battery
+            severity:
+              green: 0
+              red: -80
+              yellow: -30
+            theme: default
+            type: gauge
+          - entity: sensor.nut_ups_load
+            max: 100
+            min: 0
+            name: CP Load
+            severity:
+              green: 0
+              red: 90
+              yellow: 70
+            theme: default
+            type: gauge
+        type: horizontal-stack
+    type: vertical-stack

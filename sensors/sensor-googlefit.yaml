@@ -1,0 +1,54 @@
+# Google Fit/Mi Fit
+# - platform: google_fit
+#   name: Google Fit
+#   client_id: !secret google_fit_client_id
+#   client_secret: !secret google_fit_client_secret
+#   scan_interval: 300
+
+# - platform: template
+#   sensors:
+#     google_fit_sleep_bedtime:
+#       value_template: >
+#         {% if states.sensor.google_fit_sleep.attributes.bed_time %}
+#             {{ states.sensor.google_fit_sleep.attributes.bed_time }}
+#         {% else %}
+#             {{ states.sensor.google_fit_sleep.attributes.bed_time }}
+#         {% endif %}
+# - platform: template
+#   sensors:
+#     google_fit_sleep_wake_up_time:
+#       value_template: >
+#           {% if states.sensor.google_fit_sleep.attributes.wake_up_time %}
+#               {{ states.sensor.google_fit_sleep.attributes.wake_up_time }}
+#           {% else %}
+#               {{ states.sensor.google_fit_sleep.attributes.wake_up_time }}
+#           {% endif %}
+# - platform: template
+#   sensors:
+#     google_fit_bmi:
+#       value_template: "{{ ((states.sensor.google_fit_weight.state | float) / (((states.sensor.google_fit_height.state) | float /100)*((states.sensor.google_fit_height.state) | float /100))) | round(1)}}"
+#       unit_of_measurement: 'BMI'
+# - platform: template
+#   sensors:
+#     google_fit_body_fat:
+#       value_template: "{{ ((1.20 * states.sensor.google_fit_bmi.state|int) + (0.23 * 39) - 16.2)|round }}"
+#       unit_of_measurement: '%'
+# - platform: template
+#   sensors:
+#     google_fit_sleep_deep_sleep:
+#       value_template: >-
+#           {%- if states.sensor.hemant_sleep.attributes.deep_sleep %}
+#               {{ states.sensor.hemant_sleep.attributes.deep_sleep }}
+#           {% else %}
+#               {{ states.sensor.hemant_sleep.attributes.deep_sleep }}
+#           {%- endif %}                       
+
+# - platform: template
+#   sensors:
+#     google_fit_sleep_light_sleep:
+#       value_template: >-
+#           {%- if states.sensor.hemant_sleep.attributes.light_sleep %}
+#               {{ states.sensor.hemant_sleep.attributes.light_sleep }}
+#           {% else %}
+#               {{ states.sensor.hemant_sleep.attributes.light_sleep }}
+#           {%- endif %}             

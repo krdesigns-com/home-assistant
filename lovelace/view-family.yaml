@@ -1,0 +1,17 @@
+title: Family Room
+icon: 'mdi:home-account'
+cards:
+  - entities:
+      - entity: switch.bardi_fam_1
+        icon: 'mdi:lightbulb'
+      - entity: switch.bardi_fam_2
+        icon: 'mdi:lightbulb'
+      - light.bardi_bulb_fam
+    entity: switch.bardi_fam_1
+    state_image:
+      'off': /local/images/familyroom_dark.png
+      'on': /local/images/familyroom_light.png
+    title: Family Room
+    type: picture-glance
+  - entity: media_player.family_room_assistant
+    type: media-control

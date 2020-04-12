@@ -1,0 +1,15 @@
+custom_header: !include lovelace/custom-header.yaml
+resources: !include lovelace/resources.yaml
+title: Kedoya
+views:
+  - !include lovelace/view-rich-info.yaml
+  - !include lovelace/view-all-info.yaml
+  - !include lovelace/view-main.yaml
+  - !include lovelace/view-richard.yaml
+  - !include lovelace/view-mila.yaml
+  - !include lovelace/view-mami.yaml
+  - !include lovelace/view-family.yaml
+  - !include lovelace/view-guest.yaml
+  - !include lovelace/view-laundry.yaml
+  - !include lovelace/view-cctv.yaml
+  - !include lovelace/view-systems.yaml

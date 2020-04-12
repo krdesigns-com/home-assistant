@@ -1,0 +1,121 @@
+title: Information
+icon: 'mdi:information-outline'
+badges:
+  - sensor.broadlink_sensor_air_quality
+  - sensor.broadlink_sensor_humidity
+  - sensor.broadlink_sensor_light
+  - sensor.broadlink_sensor_noise
+  - sensor.broadlink_sensor_temperature
+cards:
+  - cards:
+      - entity: weather.home
+        type: 'custom:weather-card'
+      - entities:
+          - entities:
+              - entity: sensor.worldwide_coronavirus_confirmed
+                name: Confirmed
+                unit: false
+              - entity: sensor.worldwide_coronavirus_deaths
+                name: Deaths
+                unit: false
+            entity: sensor.worldwide_coronavirus_recovered
+            icon: 'mdi:biohazard'
+            name: Worldwide
+            secondary_info: null
+            state_header: Recovered
+            type: 'custom:multiple-entity-row'
+            unit: false
+          - entities:
+              - entity: sensor.indonesia_coronavirus_confirmed
+                name: Confirmed
+                unit: false
+              - entity: sensor.indonesia_coronavirus_deaths
+                name: Deaths
+                unit: false
+            entity: sensor.indonesia_coronavirus_recovered
+            icon: 'mdi:biohazard'
+            name: Indonesia
+            secondary_info: null
+            state_header: Recovered
+            type: 'custom:multiple-entity-row'
+            unit: false
+        show_header_toggle: false
+        title: Corona Update
+        type: entities
+      - entities:
+          - entity: calendar.holidays_in_indonesia
+        title: Indonesian Holidays
+        type: 'custom:atomic-calendar'
+    type: vertical-stack
+  - default_zoom: 8
+    entities: null
+    geo_location_sources:
+      - usgs_earthquakes_feed
+    title: Earthquakes
+    type: map
+  - cards:
+      - entities:
+          - entity: sensor.plex_rt_diskstation2
+        type: entities
+      - entities:
+          - entities:
+              - entity: sensor.speedtest_ping
+                name: Ping
+              - entity: sensor.speedtest_download
+                name: Download
+            entity: sensor.speedtest_upload
+            icon: 'mdi:speedometer'
+            name: false
+            secondary_info: null
+            state_header: Upload
+            type: 'custom:multiple-entity-row'
+        show_header_toggle: false
+        title: FM Speedtest
+        type: entities
+      - entities:
+          - entity: sensor.broadlink_sensor_temperature
+            name: Temperature
+          - entity: sensor.broadlink_sensor_air_quality
+            name: Air Quality
+          - entity: sensor.broadlink_sensor_humidity
+            name: Humidity
+        hours_to_show: 48
+        icon: 'mdi:thermometer'
+        name: My Room Temperature
+        points_per_hour: 1
+        type: 'custom:mini-graph-card'
+    type: vertical-stack
+  - artwork: cover
+    entity: media_player.spotify_rltirtadji
+    hide:
+      volume: true
+    shortcuts:
+      buttons:
+        - data:
+            entity_id: media_player.my_room_assistant
+            uri: 'spotify:track:1iIhGHzzrzqQfuNkFI2qAn'
+          id: spotcast.start
+          name: Any Song
+          type: service
+        - data:
+            entity_id: media_player.my_room_assistant
+            uri: 'spotify:playlist:2opgOkUfZxWyrxegsmJalm'
+          id: spotcast.start
+          name: OST 2019
+          type: service
+      columns: 2
+    source: icon
+    type: 'custom:mini-media-player'
+  - entity: media_player.plex_plex_for_apple_tv_bedroom
+    type: media-control
+  - card:
+      attribute: current_years
+      entity: sensor.richard_s_birthday
+      icon: 'mdi:cake-variant'
+      name: Today Richard's are
+      type: entity
+      unit: year old
+    conditions:
+      - entity: sensor.richard_s_birthday
+        state: '0'
+    type: conditional

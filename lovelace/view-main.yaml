@@ -1,0 +1,155 @@
+title: Master Bedroom
+icon: 'mdi:bed-empty'
+cards:
+  - cards:
+      - entity: climate.master_bed_room_ac
+        name: AC
+        type: thermostat
+      - entities:
+          - entity: switch.ac_power
+            icon: 'mdi:power'
+            name: AC
+        show_header_toggle: false
+        type: entities
+    type: vertical-stack
+  - cards:
+      - entities:
+          - sensor.broadlink_sensor_temperature
+          - switch.main_light
+          - switch.main_secondary_light
+        entity: switch.main_light
+        state_image:
+          'off': /local/images/masterroom_dark.png
+          'on': /local/images/masterroom_light.png
+        title: Master Bedroom
+        type: picture-glance
+      - cards:
+          - entity: light.light_bulb_bedroom_1
+            name: Bardi One
+            type: light
+          - entity: light.light_bulb_bedroom_2
+            name: Bardi Two
+            type: light
+        type: horizontal-stack
+      - cards:
+          - entity: light.hue_lamp_1
+            name: Hue One
+            type: light
+          - entity: light.hue_lamp_2
+            name: Hue Two
+            type: light
+        type: horizontal-stack
+    type: vertical-stack
+  - cards:
+      - entity: media_player.samsung_ua50hu7000
+        type: 'custom:mini-media-player'
+      - artwork: cover
+        entity: media_player.bedroom
+        type: 'custom:mini-media-player'
+      - entities:
+          - switch.tv_power
+          - script.tv_source
+          - script.tv_vol_up
+          - script.tv_vol_down
+          - script.tv_channel_up
+          - script.tv_channel_down
+        show_header_toggle: false
+        type: entities
+      - entities:
+          - switch.fm_power
+          - script.fm_channel_up
+          - script.fm_channel_down
+        show_header_toggle: false
+        title: First Media
+        type: entities
+    title: Samsung TV
+    type: vertical-stack
+  - cards:
+      - entities:
+          - switch.lg_speaker_power
+          - script.lg_speaker_vol_up
+          - script.lg_speaker_vol_down
+          - script.lg_speaker_mode
+        show_header_toggle: false
+        title: LG Speaker
+        type: entities
+      - entity: media_player.my_room_assistant
+        type: media-control
+    type: vertical-stack
+  - cards:
+      - entities:
+          - entity: switch.bardi_power_plug
+            icon: 'mdi:power'
+            name: Xbox Switch
+        show_header_toggle: false
+        title: XBox
+        type: entities
+      - cards:
+          - entity: switch.tableplug_ipad
+            icon: 'mdi:power'
+            name: iPad Charger
+            tap_action:
+              action: toggle
+            type: button
+          - entity: switch.tableplug_oneplus
+            icon: 'mdi:power'
+            name: 1+ Charger
+            tap_action:
+              action: toggle
+            type: button
+          - entity: switch.tableplug_iphone
+            icon: 'mdi:power'
+            name: iPhone Charger
+            tap_action:
+              action: toggle
+            type: button
+          - entity: switch.table_plug
+            icon: 'mdi:power'
+            name: Windows Charger
+            tap_action:
+              action: toggle
+            type: button
+          - entity: switch.tableplug_usb2
+            icon: 'mdi:usb'
+            name: USB Charger
+            tap_action:
+              action: toggle
+            type: button
+        show_header_toggle: false
+        title: Bedside Power Strip
+        type: horizontal-stack
+      - cards:
+          - entity: switch.workplug_watch
+            icon: 'mdi:power'
+            name: Watch Charger
+            tap_action:
+              action: toggle
+            type: button
+          - entity: switch.workplug_mac_2018
+            icon: 'mdi:power'
+            name: MAC 2018
+            tap_action:
+              action: toggle
+            type: button
+          - entity: switch.workplug_mac_2008
+            icon: 'mdi:power'
+            name: MAC 2008
+            tap_action:
+              action: toggle
+            type: button
+          - entity: switch.workplug_phone
+            icon: 'mdi:power'
+            name: Phone Charger
+            tap_action:
+              action: toggle
+            type: button
+          - entity: switch.workplug_usb
+            icon: 'mdi:usb'
+            name: USB Charger
+            tap_action:
+              action: toggle
+            type: button
+        show_header_toggle: false
+        title: Work Power Strip
+        type: horizontal-stack
+    type: vertical-stack

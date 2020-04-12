@@ -1,0 +1,9 @@
+title: Guest Room
+icon: 'mdi:home-floor-2'
+cards:
+  - entities:
+      - switch.guest_light
+      - switch.guest_secondary_light
+    show_header_toggle: false
+    title: Guest Room Light Switch
+    type: entities

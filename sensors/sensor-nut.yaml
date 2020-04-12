@@ -1,0 +1,9 @@
+# UPS Data
+- platform: nut
+  host: !secret synology_new_ip
+  resources:
+    - ups.status.display
+    - ups.load
+    - input.voltage
+    - battery.charge
+    - battery.runtime
