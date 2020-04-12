@@ -89,25 +89,8 @@ cards:
     entity: media_player.spotify_rltirtadji
     hide:
       volume: true
-    shortcuts:
-      buttons:
-        - data:
-            entity_id: media_player.my_room_assistant
-            uri: 'spotify:track:1iIhGHzzrzqQfuNkFI2qAn'
-          id: spotcast.start
-          name: Any Song
-          type: service
-        - data:
-            entity_id: media_player.my_room_assistant
-            uri: 'spotify:playlist:2opgOkUfZxWyrxegsmJalm'
-          id: spotcast.start
-          name: OST 2019
-          type: service
-      columns: 2
     source: icon
     type: 'custom:mini-media-player'
-  - entity: media_player.plex_plex_for_apple_tv_bedroom
-    type: media-control
   - card:
       attribute: current_years
       entity: sensor.richard_s_birthday
