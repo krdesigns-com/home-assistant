@@ -1,3 +1,4 @@
+# Cuckoo Clock Automation
 - alias: Cuckoo Clock
   trigger:
     - platform: time_pattern
@@ -33,6 +34,14 @@
         {% endif %}
 
   action:
+    # - service: tts.google_translate_say
+    #   entity_id:
+    #     - media_player.home_speaker
+    #   data_template:
+    #     message: >
+    #       {% if now().strftime("%M")|int != 30 %}
+    #         "Sekarang jam menunjukan pukul {{now().strftime("%I")}}"
+    #       {% endif %}
     - service: media_player.play_media
       data_template:
         entity_id:
@@ -127,3 +136,68 @@
   action:
     - service: light.turn_off
       entity_id: light.bardi_bulb_fam
+# Washing Machine Announcement
+# - alias: 'Washer Finished'
+#   trigger:
+#     platform: numeric_state
+#     entity_id: sensor.pow_r2_2_energy_power
+#     below: 8
+#     for:
+#       minutes: 2    
+#   action:
+#     - service: media_player.volume_set
+#       data:
+#         entity_id:
+#           - media_player.home_speaker
+#         volume_level: '0.50'
+#     - service: tts.google_translate_say
+#       entity_id:
+#         - media_player.home_speaker
+#       data_template:
+#          message: "Laundry is finish!"
+
+# Birthday Announcement Automation
+# - alias: 'Birthday Announcement'
+#   trigger:
+#     - platform: time
+#       at: "00:00:05"
+
+#   condition:
+#     - platform: numeric_state
+#       entity_id: sensor.richard_s_birthday
+#       below: 1
+#     - platform: numeric_state
+#       entity_id: sensor.milanwati_s_birthday
+#       below: 1
+#     - platform: numeric_state
+#       entity_id: sensor.dad_s_birthday
+#       below: 1
+#     - platform: numeric_state
+#       entity_id: sensor.mom_s_birthday
+#       below: 1
+#     - platform: numeric_state
+#       entity_id: sensor.daniel_s_birthday
+#       below: 1
+#     - platform: numeric_state
+#       entity_id: sensor.grace_s_birthday
+#       below: 1
+#     - platform: numeric_state
+#       entity_id: sensor.angel_s_birthday
+#       below: 1
+#     - platform: numeric_state
+#       entity_id: sensor.michi_s_birthday
+#       below: 1
+
+#   action:
+#     - service: tts.google_translate_say
+#       entity_id:
+#         - media_player.home_speaker
+#       data_template:
+#          message: "It's Someone Birthday"
+#     - service: media_player.play_media
+#       data_template:
+#         entity_id:
+#           - media_player.my_room_assistant
+#           - media_player.family_room_assistant
+#         media_content_id: https://main.hass.zone:7670/local/sounds/bday/hbday.mp3
+#         media_content_type: audio/mp4

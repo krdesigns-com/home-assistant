@@ -1,0 +1,6 @@
+# Telegram Bot
+telegram_bot:
+  - platform: polling
+    api_key: !secret telegram_api
+    allowed_chat_ids:
+      - !secret my_chat_id

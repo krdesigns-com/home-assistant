@@ -1,0 +1,6 @@
+# Anniversary Information
+anniversaries:
+  sensors:
+  - name: Dad's Birthday ✝
+    date: !secret dad_bday
+    icon_today: 'mdi:cake-variant'

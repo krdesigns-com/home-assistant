@@ -1,0 +1,4 @@
+notify:
+  - name: HassZone
+    platform: telegram
+    chat_id: !secret my_chat_id

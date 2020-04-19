@@ -1,5 +1,4 @@
 custom_header: !include lovelace/custom-header.yaml
-resources: !include lovelace/resources.yaml
 title: Kedoya
 views:
   - !include lovelace/view-rich-info.yaml

@@ -1,0 +1,9 @@
+# speedtest.Net reading
+speedtestdotnet:
+  server_id: 11118
+  scan_interval:
+    minutes: 30
+  monitored_conditions:
+    - download
+    - upload 
+    - ping

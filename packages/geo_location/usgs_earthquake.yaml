@@ -1,0 +1,6 @@
+# Earthquake Detections
+geo_location:
+  - platform: usgs_earthquakes_feed
+    feed_type: 'past_month_all_earthquakes' 
+    radius: 100
+    minimum_magnitude: 1.0

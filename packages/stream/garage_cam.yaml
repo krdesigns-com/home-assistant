@@ -1,0 +1,7 @@
+# CCTV Streams
+stream:
+ffmpeg:
+camera:
+  platform: ffmpeg
+  name: garagecam2
+  input: !secret ewelink_cam1_url

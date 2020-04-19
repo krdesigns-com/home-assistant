@@ -1,0 +1,7 @@
+# CCTV Streams
+stream:
+ffmpeg:
+camera:
+  platform: ffmpeg
+  name: frontcam
+  input: !secret yi_cam2_url

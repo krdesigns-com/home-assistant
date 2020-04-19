@@ -91,6 +91,12 @@ cards:
       volume: true
     source: icon
     type: 'custom:mini-media-player'
+  - artwork: cover
+    entity: media_player.plex_plex_for_apple_tv_bedroom
+    hide:
+      volume: true
+    source: icon
+    type: 'custom:mini-media-player'
   - card:
       attribute: current_years
       entity: sensor.richard_s_birthday

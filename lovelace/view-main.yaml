@@ -41,10 +41,17 @@ cards:
         type: horizontal-stack
     type: vertical-stack
   - cards:
-      - entity: media_player.samsung_ua50hu7000
+      - artwork: cover
+        entity: media_player.samsung_ua50hu7000
+        hide:
+          volume: true
+        source: icon
         type: 'custom:mini-media-player'
       - artwork: cover
         entity: media_player.bedroom
+        hide:
+          volume: true
+        source: icon
         type: 'custom:mini-media-player'
       - entities:
           - switch.tv_power
@@ -73,8 +80,12 @@ cards:
         show_header_toggle: false
         title: LG Speaker
         type: entities
-      - entity: media_player.my_room_assistant
-        type: media-control
+      - artwork: cover
+        entity: media_player.my_room_assistant
+        hide:
+          volume: true
+        source: icon
+        type: 'custom:mini-media-player'
     type: vertical-stack
   - cards:
       - entities:

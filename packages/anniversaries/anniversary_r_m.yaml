@@ -1,0 +1,6 @@
+# Anniversary Information
+anniversaries:
+  sensors:
+  - name: Our's Anniversary
+    date: !secret anniversary_r_m
+    icon_today: 'mdi:ring'

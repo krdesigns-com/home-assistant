@@ -3,6 +3,7 @@ default_config:
 
 homeassistant:
   customize: !include customize.yaml
+  packages: !include_dir_named packages
 
 frontend:
   themes: !include_dir_merge_named themes/
@@ -15,11 +16,7 @@ http:
   base_url: !secret base_url
   ip_ban_enabled: true
   login_attempts_threshold: 5
-
-# Text to speech
-tts:
-  - platform: google_translate
-
+    
 group: !include groups.yaml
 automation: !include automations.yaml
 scene: !include scenes.yaml
@@ -31,91 +28,10 @@ script: !include_dir_named scripts/
 # Lovelace Control
 lovelace:
   mode: yaml
-
-# Influxdb Database
-influxdb:
-  host: !secret influxdb_host
-
-# CCTV Streams
-stream:
-ffmpeg:
-camera:
-  - platform: ffmpeg
-    name: frontcam
-    input: !secret yi_cam2_url
-  - platform: ffmpeg
-    name: gardencam
-    input: !secret yi_cam3_url
-  - platform: ffmpeg
-    name: kitchen
-    input: !secret yi_cam4_url
-  - platform: ffmpeg
-    name: garagecam2
-    input: !secret ewelink_cam1_url
-
-# Broadlink IR AC
-smartir:
-climate:
-  - platform: smartir
-    name: Master Bed Room AC
-    unique_id: mbr_ac
-    device_code: 1100
-    controller_data: !secret broad_rm_ip
-    temperature_sensor: sensor.temperature
-    humidity_sensor: sensor.humidity
-    power_sensor: binary_sensor.ac_power
+  resources: !include lovelace/resources.yaml
 
 # iOS Preparations
 ios:
 
 # New Discovery
 discovery:
-
-# Plex Media Server
-media_player:
-  - platform: plex
-
-# speedtest.Net reading
-speedtestdotnet:
-  scan_interval:
-    minutes: 30
-  monitored_conditions:
-    - download
-    - upload 
-    - ping
-
-# Earthquake Detections
-geo_location:
-  - platform: usgs_earthquakes_feed
-    feed_type: 'past_month_all_earthquakes' 
-    radius: 100
-    minimum_magnitude: 1.0
-
-# Google Activated
-google:
-  client_id: !secret google_fit_client_id
-  client_secret: !secret google_fit_client_secret
-
-# Telegram Bot
-telegram_bot:
-  - platform: polling
-    api_key: !secret telegram_api
-    allowed_chat_ids:
-      - !secret my_chat_id
-
-notify:
-  - name: HassZone
-    platform: telegram
-    chat_id: !secret my_chat_id
-
-# Spotify Settings
-spotify:
-  client_id: !secret spotify_client_id
-  client_secret: !secret spotify_client_secret
-
-# spotcast:
-#   username: !secret username_spotify
-#   password: !secret password_spotify
-
-# Anniversary Information
-anniversaries: !include anniversary.yaml

@@ -1,0 +1,7 @@
+# CCTV Streams
+stream:
+ffmpeg:
+camera:
+  platform: ffmpeg
+  name: kitchen
+  input: !secret yi_cam4_url

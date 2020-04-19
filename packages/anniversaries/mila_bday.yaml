@@ -1,0 +1,6 @@
+# Anniversary Information
+anniversaries:
+  sensors:
+  - name: Milanwati's Birthday
+    date: !secret mila_bday
+    icon_today: 'mdi:cake-variant'

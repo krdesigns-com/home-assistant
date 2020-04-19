@@ -1,0 +1,6 @@
+# Anniversary Information
+anniversaries:
+  sensors:
+  - name: Michi'S Birthday
+    date: !secret michi_bday
+    icon_today: 'mdi:cake-variant'

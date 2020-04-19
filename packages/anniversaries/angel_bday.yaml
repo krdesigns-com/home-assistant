@@ -1,0 +1,6 @@
+# Anniversary Information
+anniversaries:
+  sensors:
+  - name: Angel's Birthday
+    date: !secret angel_bday
+    icon_today: 'mdi:cake-variant'
